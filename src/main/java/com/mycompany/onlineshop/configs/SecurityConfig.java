@@ -20,9 +20,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         this.userService = userService;
     }
 
+    // TODO create file, where we will store roles and authorities, so that they won't be hardcoded!
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
+        http.authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("/account/**").hasAnyRole("ROLE_USER", "ROLE_ADMIN")
+                .antMatchers("/admins/**").hasRole("ROLE_ADMIN")
+                .and()
+                .formLogin()
+                .and()
+                .logout().logoutSuccessUrl("/");
     }
 
     @Bean
