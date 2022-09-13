@@ -11286,3 +11286,12 @@ textarea.form-control-lg {
         display: none !important;
     }
 }
+
+/*
+My custom styles
+ */
+
+.login-position {
+    position: relative;
+    top: 5px;
+}
