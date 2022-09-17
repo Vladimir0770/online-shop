@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -47,8 +47,8 @@
                     <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </button>
             </form>
-            <p class="nav-item login-position"><a class="nav-link" href="/login">Sign up</a></p>
-            <p class="nav-item login-position"><a class="nav-link" href="/signup">Log in</a></p>
+            <p class="nav-item login-position"><a class="nav-link" th:href="@{/signup}">Sign up</a></p>
+            <p class="nav-item login-position"><a class="nav-link" th:href="@{/login}">Log in</a></p>
         </div>
     </div>
 </nav>
