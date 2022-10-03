@@ -1,0 +1,9 @@
+.my-flex {
+    display: flex;
+    justify-content: end;
+}
+.put-down-items {
+    position: relative;
+    top: 8px;
+    color: rgba(0,0,0,.5);
+}
